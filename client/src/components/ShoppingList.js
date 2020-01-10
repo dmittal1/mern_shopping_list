@@ -13,7 +13,7 @@ class ShoppingList extends Component {
     }
 
     render(){
-        const { items } = this.state;
+        const { items } = this.props.item;
         return(
             <Container>
                 <Button
@@ -65,5 +65,6 @@ ShoppingList.propTypes = {
 const mapStateToProps = (state) => ({
     item: state.item 
 });
+
 
 export default connect(mapStateToProps, { getItems })(ShoppingList);
